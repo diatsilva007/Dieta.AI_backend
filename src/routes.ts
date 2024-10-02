@@ -1,5 +1,21 @@
-import fastify from 'fastify';
-import cors from '@fastify/cors';
-import dotenv from 'dotenv';
+import {
+    FastifyInstance,
+    FastifyPluginOptions,
+    FastifyRequest,
+    FastifyReply
+} from 'fastify';
+import { CreateNutritionController } from './controllers/CreateNutritionController'
 
-const app = fastify({logger: true})
+export async function routes(fastify: FastifyInstance, options: FastifyPluginOptions) {
+
+    fastify.get("/teste", (request: FastifyRequest, reply: FastifyReply) => {
+        console.log("Rota chamada!!!!");
+
+        reply.send({ ok: true });
+    })
+
+    fastify.get("/create", async (request: FastifyRequest, reply: FastifyReply) => {
+        return new CreateNutritionController().handle(request, reply)
+    })
+
+}
