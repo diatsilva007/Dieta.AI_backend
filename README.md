@@ -25,3 +25,4 @@ Inicie o servidor
 ```bash
   npm run dev
 ```
+## Para que o backend funcione é necessário ter o DietaAI_mobile, favor seguir instruções via README.md no seguinte repositório: [DietaAI_mobile](https://github.com/diatsilva007/Dieta.AI_mobile)
