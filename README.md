@@ -11,7 +11,7 @@ Clone o projeto
 Entre no diretório do projeto
 
 ```bash
-  cd backend
+  cd Dieta.AI_backend
 ```
 
 Instale as dependências
